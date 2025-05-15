@@ -5,6 +5,16 @@
 
 #include "main.h"
 
+u_int16_t get_section_checksum(uint8_t *data_ptr) {
+  uint32_t sum = 0;
+  for (size_t i = 0; i < SECTION_DATA_SIZE; i += 4) {
+    // interpret the uint8_t* as uint32_t* and then deference it to get the
+    // actual value
+    sum += *(uint32_t *)(data_ptr + i);
+  }
+  return sum + (sum >> 16);
+}
+
 int main() {
   FILE *save_file = fopen(SAVE_FILE_PATH, "rb");
   if (!save_file) {
@@ -36,6 +46,8 @@ int main() {
     fseek(save_file, offset + SECTION_CHECKSUM_OFFSET, SEEK_SET);
     fread(&sections[i].checksum, sizeof(uint16_t), 1, save_file);
 
+    uint16_t calculated_checksum = get_section_checksum(sections[i].data);
+
     // reading the magic signature
     fseek(save_file, offset + SECTION_SIGNATURE_OFFSET, SEEK_SET);
     fread(&sections[i].signature, sizeof(uint32_t), 1, save_file);
@@ -44,19 +56,20 @@ int main() {
     fseek(save_file, offset + SECTION_SAVE_INDEX_OFFSET, SEEK_SET);
     fread(&sections[i].save_index, sizeof(u_int32_t), 1, save_file);
 
-    printf("-----------------------------------------------\n");
+    printf("--------------------------------------------------------------\n");
     printf("     (Offset: %lx)\n", offset);
     printf("     Section ID: %x (hex) -> %d (dec)\n", sections[i].section_id,
            sections[i].section_id);
     printf("     Checksum: %x (hex) -> %d (dec)\n", sections[i].checksum,
            sections[i].checksum);
+    printf("     Calculated Checksum: %x (hex) -> %d (dec)\n",
+           calculated_checksum, calculated_checksum);
     printf("     Signature: %x (hex) -> %d (dec)\n", sections[i].signature,
            sections[i].signature);
     printf("     Save Index: %x (hex) -> %d (dec)\n", sections[i].save_index,
            sections[i].save_index);
-    // break;
   }
-  printf("-----------------------------------------------\n");
+  printf("--------------------------------------------------------------\n");
 
   fclose(save_file);
   return 0;
