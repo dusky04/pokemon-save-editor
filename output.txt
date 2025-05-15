@@ -1,0 +1,88 @@
+LOG: File Found at fire-red/Pokemon - Fire Red Version (U) (V1.1).sav
+LOG: Reading from Game Save B.
+LOG: Game Save B
+-----------------------------------------------
+     (Offset: e000)
+     Section ID: d (hex) -> 13 (dec)
+     Checksum: f131 (hex) -> 61745 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: f000)
+     Section ID: 0 (hex) -> 0 (dec)
+     Checksum: b370 (hex) -> 45936 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 10000)
+     Section ID: 1 (hex) -> 1 (dec)
+     Checksum: 6391 (hex) -> 25489 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 11000)
+     Section ID: 2 (hex) -> 2 (dec)
+     Checksum: 79e6 (hex) -> 31206 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 12000)
+     Section ID: 3 (hex) -> 3 (dec)
+     Checksum: 8b5 (hex) -> 2229 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 13000)
+     Section ID: 4 (hex) -> 4 (dec)
+     Checksum: 148d (hex) -> 5261 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 14000)
+     Section ID: 5 (hex) -> 5 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 15000)
+     Section ID: 6 (hex) -> 6 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 16000)
+     Section ID: 7 (hex) -> 7 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 17000)
+     Section ID: 8 (hex) -> 8 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 18000)
+     Section ID: 9 (hex) -> 9 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 19000)
+     Section ID: a (hex) -> 10 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 1a000)
+     Section ID: b (hex) -> 11 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------
+     (Offset: 1b000)
+     Section ID: c (hex) -> 12 (dec)
+     Checksum: 0 (hex) -> 0 (dec)
+     Signature: 8012025 (hex) -> 134291493 (dec)
+     Save Index: 1 (hex) -> 1 (dec)
+-----------------------------------------------

@@ -5,10 +5,14 @@
 // The game alternates which region of the save file it writes to each time the
 // game is saved.
 
+// The very first time the game is saved it is saved in save block B.
+
 #define SAVE_FILE_PATH "fire-red/Pokemon - Fire Red Version (U) (V1.1).sav"
 
 #define GAME_SAVE_A_OFFSET 0x0000
 #define GAME_SAVE_B_OFFSET 0xE000
+
+#define NUM_SECTIONS 14
 
 // Size of each section (4KB)
 #define SECTION_SIZE 0x1000
@@ -57,8 +61,8 @@ typedef enum {
 
 typedef struct {
   uint8_t data[SECTION_DATA_SIZE];
-  uint16_t section_id;
   SectionType type;
+  uint16_t section_id;
   uint16_t checksum;
   uint32_t signature;
   uint32_t save_index;
