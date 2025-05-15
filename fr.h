@@ -1,4 +1,8 @@
+#ifndef FR_H
+#define FR_H
+
 #include <stdint.h>
+#include <stdio.h>
 
 // Each Game Save consists of 14 sections each of 4KB each
 
@@ -41,6 +45,8 @@
 
 #define OFFSET_BY_B(OFFSET) (OFFSET + GAME_SAVE_B_OFFSET)
 
+typedef enum { GAME_SAVE_A, GAME_SAVE_B } GameSave;
+
 // 14 types of section
 typedef enum {
   TRAINER_INFO,
@@ -61,9 +67,23 @@ typedef enum {
 
 typedef struct {
   uint8_t data[SECTION_DATA_SIZE];
-  SectionType type;
   uint16_t section_id;
   uint16_t checksum;
   uint32_t signature;
   uint32_t save_index;
 } Section;
+
+typedef struct {
+  uint8_t player_name[7];
+  uint8_t player_gender;
+
+} TrainerInfo;
+
+uint16_t get_section_checksum(uint8_t *data_ptr);
+
+void read_sections(FILE *save_file, Section sections[NUM_SECTIONS],
+                   GameSave game_save_name);
+
+GameSave get_latest_save_game_name(FILE *save_file);
+
+#endif
